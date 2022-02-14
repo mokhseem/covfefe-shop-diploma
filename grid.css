@@ -1,0 +1,45 @@
+.site-header {
+  grid-area: header;
+}
+
+.promo {
+  grid-area: promo;
+  height: 200px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.blog {
+  grid-area: blog;
+}
+
+.site-footer {
+  grid-area: footer;
+  height: 100px;
+}
+
+.wrapper {
+  display: grid;
+  max-width: 550px;
+  margin: 0 auto;
+  gap: 20px;
+  grid-template-areas:
+    "header"
+    "promo"
+    "blog"
+    "sidebar"
+    "footer";
+}
+
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "header header"
+      "promo  sidebar"
+      "blog   sidebar"
+      "footer footer";
+  }
+}
