@@ -5,10 +5,12 @@
 .promo {
   grid-area: promo;
   height: 200px;
+  max-width: 390px;
 }
 
 .sidebar {
   grid-area: sidebar;
+  max-width: 390px;
 }
 
 .blog {
@@ -22,7 +24,6 @@
 
 .wrapper {
   display: grid;
-  max-width: 550px;
   margin: 0 auto;
   gap: 20px;
   grid-template-areas:
@@ -41,5 +42,45 @@
       "promo  sidebar"
       "blog   sidebar"
       "footer footer";
+  }
+}
+
+@media (min-width: 610px) {
+  .wrapper {
+    grid-template-columns: 2fr 1.5fr;
+  }
+}
+
+@media (min-width: 720px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header  header"
+      "promo   sidebar"
+      "blog    blog"
+      "footer  footer";
+  }
+
+  .blog {
+    grid-area: blog;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .blog-item:not(:last-child) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 1080px) {
+  .wrapper {
+    grid-template-columns: auto 1fr 1fr auto;
+    grid-template-areas:
+      "header header  header  header"
+      ".      promo   sidebar ."
+      ".      blog    blog    ."
+      "footer footer  footer  footer";
   }
 }
