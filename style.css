@@ -35,7 +35,7 @@ a {
   position: relative;
   margin-inline-end: auto;
   padding-left: 10px;
-  font: 20px "PT Sans Caption", sans-serif;
+  font: bold 20px "PT Sans Caption", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
@@ -147,7 +147,6 @@ a {
   align-items: center;
   padding: 10px;
   margin: 0;
-  list-style: none;
 }
 
 .site-footer a {
