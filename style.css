@@ -58,6 +58,11 @@ a {
   padding-right: 30px;
 }
 
+.site-nav > .button {
+  max-width: none;
+  padding-right: 10px;
+}
+
 .modal {
   display: none;
   position: absolute;
