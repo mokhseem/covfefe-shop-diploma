@@ -1,24 +1,29 @@
-var popup = document.querySelector('.modal');
-var openPopupButton = document.querySelector('.button-open');
-var closePopupButton = popup.querySelector('.button-close');
+const popup = document.querySelector('.modal');
+const openPopupButton = document.querySelector('.button-open');
+const closePopupButton = popup.querySelector('.button-close');
 
-openPopupButton.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  popup.classList.add('modal--show');
-});
-
-closePopupButton.addEventListener('click', function () {
-  popup.classList.remove('modal--show');
-});
-
-document.addEventListener('click', function (evt) {
-  if (evt.target === popup) {
-    popup.classList.remove('modal--show');
+const onPopupEscKeydown = (evt) => {
+  if (evt.key === 'Escape' || evt.key === 'Esc') {
+    evt.preventDefault();
+    closePopup();
   }
-});
+};
 
-document.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
-    popup.classList.remove('modal--show');
+function openPopup () {
+  popup.classList.toggle('modal--show');
+  document.addEventListener('keydown', onPopupEscKeydown);
+}
+
+function closePopup () {
+  popup.classList.toggle('modal--show');
+  document.removeEventListener('keydown', onPopupEscKeydown);
+}
+
+openPopupButton.addEventListener('click', openPopup);
+closePopupButton.addEventListener('click', closePopup);
+
+popup.addEventListener('click', ({target}) => {
+  if (target === popup) {
+    closePopup();
   }
 });
