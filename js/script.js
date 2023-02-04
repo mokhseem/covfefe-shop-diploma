@@ -1,6 +1,6 @@
-const popup = document.querySelector('.modal');
-const openPopupButton = document.querySelector('.button-open');
-const closePopupButton = popup.querySelector('.button-close');
+const popup = document.querySelector('.contact');
+const openPopupButton = document.querySelector('.button--open');
+const closePopupButton = popup.querySelector('.button--close');
 
 const onPopupEscKeydown = (evt) => {
   if (evt.key === 'Escape' || evt.key === 'Esc') {
@@ -10,12 +10,12 @@ const onPopupEscKeydown = (evt) => {
 };
 
 function openPopup () {
-  popup.classList.toggle('modal--show');
+  popup.classList.toggle('hidden');
   document.addEventListener('keydown', onPopupEscKeydown);
 }
 
 function closePopup () {
-  popup.classList.toggle('modal--show');
+  popup.classList.toggle('hidden');
   document.removeEventListener('keydown', onPopupEscKeydown);
 }
 
