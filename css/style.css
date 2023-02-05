@@ -12,24 +12,41 @@
 }
 
 @font-face {
-  font-weight: bold;
+  font-family: "GG Wolfram";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/subsets/logo/GGWolfram-Regular.woff2") format("woff2"),
+    url("../fonts/subsets/logo/GGWolfram-Regular.woff2") format("woff");
+  unicode-range: U+412, U+415, U+41A, U+41E, U+425;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/PTSans-Regular.woff2") format("woff2"),
+    url("../fonts/PTSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
+}
+
+@font-face {
   font-family: "PT Sans Caption";
-  src: url("../fonts/pt-sans_caption-bold.woff2") format("woff2"),
-    url("../fonts/pt-sans_caption-bold.woff") format("woff");
-}
-
-@font-face {
-  font-weight: normal;
-  font-family: "PT Sans";
-  src: url("../fonts/pt-sans_regular.woff2") format("woff2"),
-    url("../fonts/pt-sans_regular.woff") format("woff");
-}
-
-@font-face {
-  font-weight: bold;
-  font-family: "PT Sans";
-  src: url("../fonts/pt-sans_bold.woff2") format("woff2"),
-    url("../fonts/pt-sans_bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/subsets/phone/PTSansCaption-Bold.woff2") format("woff2"),
+    url("../fonts/subsets/phone/PTSansCaption-Bold.woff2") format("woff");
+  unicode-range: U+20, U+23, U+28-2B, U+2D, U+30-39;
 }
 
 html {
@@ -78,6 +95,7 @@ a {
 
 .header,
 .footer {
+  align-items: center;
   color: white;
   background-color: var(--color-coffeebean);
 }
@@ -85,15 +103,15 @@ a {
 .header__layout {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .header__logo {
-  font-weight: bold;
-  font-size: 1.5em;
-  font-family: "PT Sans Caption", sans-serif;
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.75em;
+  font-family: "GG Wolfram", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.05rem;
 }
 
 .navigation {
@@ -320,7 +338,7 @@ a {
 .footer__layout {
   display: grid;
   gap: 1em;
-  align-items: center;
+  /* align-items: center; */
   grid-template-columns: min-content minmax(auto, 400px);
 }
 
