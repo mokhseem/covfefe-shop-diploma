@@ -51,7 +51,7 @@
 
 html {
   font-size: 16px;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: "PT Sans", "Trebuchet MS", sans-serif;
   color: var(--color-bistre);
   background-color: snow;
   scroll-behavior: smooth;
@@ -325,9 +325,9 @@ a {
 }
 
 .contact__phone {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.25rem;
-  font-family: "PT Sans Caption", "Arial", sans-serif;
+  font-family: "PT Sans Caption", "Trebuchet MS", sans-serif;
   color: chocolate;
 }
 
@@ -338,7 +338,6 @@ a {
 .footer__layout {
   display: grid;
   gap: 1em;
-  /* align-items: center; */
   grid-template-columns: min-content minmax(auto, 400px);
 }
 
